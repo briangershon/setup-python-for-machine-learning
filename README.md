@@ -6,6 +6,8 @@ These are setup instructions for adding a Python 3.7 virtual environment to any 
 
 The advantage of this approach over Anaconda is that your environment is within your project folder and self-contained. Makes it easier to work on across machines.
 
+Though if you're just getting started with Python, you may want to go the Anaconda route.
+
 ## Install Python
 
     Use existing `python3` on MacOS.
@@ -40,7 +42,21 @@ The advantage of this approach over Anaconda is that your environment is within 
 
 ## Setup Visual Studio Code
 
+Setup VS Code so that you can run your Python programs directly in the editor.
+
 - install pylint plugin
 - choose "Python: Select Interpreter" command and pick the virtual env one
 
 VS Code then nicely creates a `.vscode/settings.json` in your project which sets the pythonPath for you in your local env.
+
+## Setup and Run Jupyter Notebooks
+
+If you have Python program that requires a visual component, say `matplotlib` you can edit, run and display via a Jupyter Notebook.
+
+    pip install jupyter
+    pip install matplotlib
+
+    # start Jupyter server
+    jupyter notebook
+
+    # open your `.ipynb` notebook file via Jupyter running in the browser
