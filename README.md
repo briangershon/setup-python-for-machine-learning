@@ -1,32 +1,35 @@
-setup-python
-===========
+# setup-python
 
-Setting up Python for Machine Learning.
+Setting up Python 3.7 for Machine Learning on MacOS.
 
-Install Python
---------------
+## Install Python
 
-Install Anaconda or Miniconda to create Python 3.7+ virtual envs and download machine learning libraries.
+    brew install python3
+    # verify your path is setup correctly to run `/usr/local/bin/python3`.
 
-Visit https://docs.anaconda.com/anaconda/install
+## Manage Python Virtual Environment
 
-Manage Python Virtual Environment
----------------------------------
+    # create new virtual environment in your projects folder
+    python3 -m venv env
 
-    # create new virtual environment
-    conda create -n my-project python=3.7
+    # add "env" to your .gitignore
 
-    # activate your project's virtual environment
-    conda activate my-project
+    # activate environment
+    source env/bin/activate
 
-    # double-check everything is working and you have correct version
-    python --version
+    # optionally upgrade pip
+    pip install --upgrade pip
 
-    # which Python packages are installed?
-    conda list
+    # install packages, for example:
+    pip install pylint tensorflow scikit-learn
 
-    # install a package, for example:
-    conda install scikit-learn
+    # optionally save all installed python packages into a file
+    pip freeze > requirements.txt
 
-    # what virtual environments do I already have?
-    conda info --envs
+    # which can then be loaded via `pip install`
+    pip install -r requirements.txt
+
+## Setup Visual Studio Code
+
+- install pylint plugin
+- choose "Python: Select Interpreter" command and pick the virtual env one
