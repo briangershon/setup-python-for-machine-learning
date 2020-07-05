@@ -1,4 +1,4 @@
-# setup-python
+# setup-python-for-machine-learning
 
 Do you have a Python Machine Learning project that needs its own virtual environment?
 
