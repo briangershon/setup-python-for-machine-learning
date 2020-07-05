@@ -1,12 +1,14 @@
 # setup-python
 
-Do you have a Python project that needs its own virtual environment?
+Do you have a Python Machine Learning project that needs its own virtual environment?
 
-These are setup instructions for adding a Python 3.7 virtual environment to any project. (MacOS specific)
+These are MacOS setup instructions for adding a Python 3.7 virtual environment to any project.
 
 The advantage of this approach over Anaconda is that your environment is within your project folder and self-contained. Makes it easier to work on across machines.
 
 Though if you're just getting started with Python, you may want to go the Anaconda route.
+
+(These virtual environment setup instructions can be used for any project, but focus here is on setting up a Machine Learning environment)
 
 ## Install Python
 
@@ -27,36 +29,40 @@ Though if you're just getting started with Python, you may want to go the Anacon
     # activate environment
     source env/bin/activate
 
-    # optionally upgrade pip and setuptools
+    # upgrade pip and setuptools
     pip install --upgrade pip
     pip install setuptools --upgrade
 
-    # install packages, for example:
-    pip install pylint tensorflow scikit-learn
+    # install popular ML packages
+    pip install pylint tensorflow scikit-learn matplotlib jupyter
 
-    # optionally save all installed python packages into a file
+    # if you're doing image processing install Pillow (PIL fork)
+    brew install libtiff libjpeg webp littlecms
+    pip install Pillow
+
+    # optionally save all installed python packages into a file...
     pip freeze > requirements.txt
 
-    # which can then be loaded via `pip install`
+    # ...which can then be loaded via `pip install`
     pip install -r requirements.txt
-
-## Setup Visual Studio Code
-
-Setup VS Code so that you can run your Python programs directly in the editor.
-
-- install pylint plugin
-- choose "Python: Select Interpreter" command and pick the virtual env one
-
-VS Code then nicely creates a `.vscode/settings.json` in your project which sets the pythonPath for you in your local env.
 
 ## Setup and Run Jupyter Notebooks
 
-If you have Python program that requires a visual component, say `matplotlib` you can edit, run and display via a Jupyter Notebook.
+Use Jupyter Notebook to edit and run your programs. This supports a nice mix of code, markdown docs, and visual elements like images and plots.
 
+    # install Jupyter
     pip install jupyter
-    pip install matplotlib
 
     # start Jupyter server
     jupyter notebook
 
     # open your `.ipynb` notebook file via Jupyter running in the browser
+
+## Setup Visual Studio Code
+
+If you want to use VS Code editor and run programs (that don't have a visual element):
+
+- install pylint plugin
+- choose "Python: Select Interpreter" command and pick the virtual env one
+
+VS Code then nicely creates a `.vscode/settings.json` in your project which sets the pythonPath for you in your local env.
