@@ -40,9 +40,8 @@ Though if you're just getting started with Python, you may want to go the Anacon
 Use Jupyter Notebook to edit and run your programs. This supports a nice mix of code, markdown docs, and visual elements like images and plots.
 
     # Install Jupyter Notebooks and ipython
-    pip install ipython ipykernel
+    pip install jupyter jupyterlab
     ipython kernel install --user --name=.env
-    pip install jupyterlab notebook ipywidgets
 
     # start Jupyter notebook or JupyterLab
     jupyter notebook
@@ -54,7 +53,7 @@ Use Jupyter Notebook to edit and run your programs. This supports a nice mix of 
 
     # Install other popular libraries as desired
     pip install numpy pandas matplotlib seaborn plotly
-    pip install pylint tensorflow scikit-learn matplotlib jupyter
+    pip install tensorflow scikit-learn
 
     # if you're doing image processing install Pillow (PIL fork)
     brew install libtiff libjpeg webp littlecms
