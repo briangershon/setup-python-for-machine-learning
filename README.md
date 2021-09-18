@@ -72,9 +72,8 @@ Use Jupyter Notebook to edit and run your programs. This supports a nice mix of 
 
 ## Setup Visual Studio Code
 
-If you want to use VS Code editor and run programs that don't have a visual element:
+If you want to run program directly in Visual Studio Code editor, just install the VS Code Python plugin from Microsoft. It automatically looks for virtual environments in the project's folder.
 
-- install the `pylint` plugin
-- choose "Python: Select Interpreter" command and pick the virtual env one
+However if you need to do this manually, choose `View > Command Palette...` then `Python: Select Interpreter` then pick the virtual env one.
 
-VS Code then nicely creates a `.vscode/settings.json` in your project which sets the pythonPath for you in your local env.
+For more info, see <https://code.visualstudio.com/docs/python/environments>.
