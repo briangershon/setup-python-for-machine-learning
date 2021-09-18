@@ -32,8 +32,7 @@ Though if you're just getting started with Python, you may want to go the Anacon
     source env/bin/activate
 
     # upgrade pip and setuptools
-    pip install --upgrade pip
-    pip install setuptools --upgrade
+    pip install --upgrade pip setuptools wheel
 
 ## Setup and Run Jupyter Notebooks
 
